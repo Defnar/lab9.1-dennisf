@@ -13,9 +13,9 @@ export default function AlertBox({
     info: "bg-blue-100 border-blue-500 text-blue-700",
   };
   return (
-    <div className={`p-4 border-1-4 ${alertStyles[type]}`}>
+    <div className={`p-4 w-xl border-1-4 flex flex-col gap-2 ${alertStyles[type]}`}>
       <div className="flex justify-between items-center">
-        <p>{message}</p>
+        <p className="font-bold">{message}</p>
         <button
           type="button"
           onClick={onClose}

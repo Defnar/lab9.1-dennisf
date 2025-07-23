@@ -8,13 +8,13 @@ export default function UserProfileCard({
   children,
 }: UserProfileCardProps) {
   return (
-    <div className="">
-      <h2>{user.name}</h2>
-      <p>{showEmail ? user.email : "email hidden"}</p>
-      <p>{showRole ? user.role : "role hidden"}</p>
+    <div className="bg-white py-7 rounded-md leading-7 w-sm text-center">
+      <h2 className="font-bold text-black">{user.name}</h2>
+      <p className="text-gray-700">{showEmail ? user.email : "email hidden"}</p>
+      <p className="text-gray-700">{showRole ? user.role : "role hidden"}</p>
       <p>{children}</p>
       {onEdit && (
-        <button type="button" onClick={() => onEdit(user.id)}>
+        <button className="bg-blue-500 w-80 rounded-sm"  type="button" onClick={() => onEdit(user.id)}>
           Edit Profile
         </button>
       )}
