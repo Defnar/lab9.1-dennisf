@@ -1,4 +1,3 @@
-import React from "react";
 import type { AlertBoxProps } from "../../types";
 
 export default function AlertBox({
@@ -17,14 +16,13 @@ export default function AlertBox({
     <div className={`p-4 border-1-4 ${alertStyles[type]}`}>
       <div className="flex justify-between items-center">
         <p>{message}</p>
-        {onClose && (
-          <button
-            onClick={onClose}
-            className="ml-4 text-gray-500 hover:text-gray-700"
-          >
-            x
-          </button>
-        )}
+        <button
+          type="button"
+          onClick={onClose}
+          className="ml-4 text-gray-500 hover:text-gray-700"
+        >
+          x
+        </button>
       </div>
       {children}
     </div>
