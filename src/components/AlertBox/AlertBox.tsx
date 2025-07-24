@@ -1,12 +1,13 @@
 import type { AlertBoxProps } from "../../types";
 
+//this is the component to open the alert box when called
 export default function AlertBox({
   type,
   message,
   onClose,
   children,
 }: AlertBoxProps) {
-  const alertStyles = {
+  const alertStyles = {   //these are props to determine the color of the alert box depending on alert
     success: "bg-green-100 border-green-500 text-green-700",
     error: "bg-red-100 border-red-500 text-red-700",
     warning: "bg-yellow-100 border-yellow-500 text-yellow-700",

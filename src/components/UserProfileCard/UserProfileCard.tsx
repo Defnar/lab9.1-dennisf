@@ -1,5 +1,7 @@
 import type { UserProfileCardProps } from "../../types";
 
+
+//this component creates and displays a profile card
 export default function UserProfileCard({
   user,
   showEmail,

@@ -6,6 +6,10 @@ import UserProfileCard from "./components/UserProfileCard/UserProfileCard";
 import type { Product, User } from "./types";
 
 const App = () => {
+  //I really wanted to do my own completely custom, but looking at the example
+  //I couldn't find a way to swap visibility states with my lack of knowledge on states.
+  //I used this from the example but custom built as much as I could to demonstrate my 
+  //understanding of how all of this works.  Hence the nested alert on user, etc.
   const [showUserAlert, setShowUserAlert] = useState(false);
   const [showShopAlert, setShowShopAlert] = useState(false);
   const [cartItems, setCartItems] = useState<string[]>([]);
@@ -15,7 +19,7 @@ const App = () => {
     setShowShopAlert(true);
   };
 
-  const user: User = {
+  const user: User = {  //these are all props that will be passed into the tsx.
     id: "1",
     name: "John Doe",
     email: "john.doe@example.com",
@@ -23,7 +27,7 @@ const App = () => {
     avatarUrl: "https://example.com/avatar.jpg",
   };
 
-  const product: Product = {
+  const product: Product = {   //set of product props to send into the tsx.
     id: "1",
     name: "Wireless Headphones",
     price: 199.99,
@@ -47,7 +51,7 @@ const App = () => {
             message="Editing user profile"
             onClose={() => setShowUserAlert(false)}
           >
-            <p>Pretend the editing user modal is open for {user.id}</p>
+            <p>Pretend the editing user modal is open for ID:{user.id}</p>  {/*this user id is a prop passed in from the parent it's nested in*/}
           </AlertBox>
         )}
       </UserProfileCard>

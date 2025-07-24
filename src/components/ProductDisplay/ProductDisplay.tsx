@@ -1,5 +1,7 @@
 import type { ProductDisplayProps } from "../../types";
 
+
+//this is the component for product display
 export default function ProductDisplay({
   product,
   showDescription,
@@ -8,7 +10,7 @@ export default function ProductDisplay({
   children,
 }: ProductDisplayProps) {
 
-  const productStyles = product.inStock? "text-green-700" : "text-red-700";
+  const productStyles = product.inStock? "text-green-700" : "text-red-700";  //this prop will change the color of in stock and out of stock respectively
 
   return (
     <div className="w-150 mx-auto bg-white rounded-lg relative overflow-hidden text-center text-black flex flex-col gap-1">
