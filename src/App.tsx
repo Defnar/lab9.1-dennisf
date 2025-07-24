@@ -7,7 +7,8 @@ import type { Product, User } from "./types";
 
 const App = () => {
   //I really wanted to do my own completely custom, but looking at the example
-  //I couldn't find a way to swap visibility states with my lack of knowledge on states.
+  //I couldn't find a way to swap visibility states for product with my lack of knowledge on states
+  //and the way I have product and such set up with its internal function.
   //I used this from the example but custom built as much as I could to demonstrate my 
   //understanding of how all of this works.  Hence the nested alert on user, etc.
   const [showUserAlert, setShowUserAlert] = useState(false);
@@ -24,7 +25,6 @@ const App = () => {
     name: "John Doe",
     email: "john.doe@example.com",
     role: "Software Engineer",
-    avatarUrl: "https://example.com/avatar.jpg",
   };
 
   const product: Product = {   //set of product props to send into the tsx.
